@@ -1,0 +1,442 @@
+@mixin zoom($zoom) {
+    zoom: $zoom;
+    -ms-zoom: $zoom;
+    -webkit-zoom: $zoom;
+    -moz-transform:  scale($zoom, $zoom);
+    -moz-transform-origin: left center;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1430px;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        .nav {
+            &.additional-nav {
+                -webkit-box-pack: center !important;
+                -ms-flex-pack: center !important;
+                justify-content: center !important;
+            }
+        }
+
+        .logo {
+            text-align: center !important;
+        }
+    }
+
+    .calendar-empty,
+    .dropdown-empty {
+        display: none;
+    }
+
+    .calendar {
+        max-width: 100%;
+    }
+
+    .height-790,
+    .box.height-606 {
+        height: auto;
+    }
+
+    .box {
+        .tab-content .linear img,
+        .content.social_chart img {
+            position: relative;
+        }
+
+        .content.social_chart {
+            padding-top: 10px;
+        }
+    }
+
+    .charts-row {
+        .col-md-6 {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 991px) {
+    div.social-row {
+        .box {
+            .head {
+                h5 {
+                    width: auto !important;
+                    padding: 0 !important;
+                    position: relative;
+                    overflow: hidden;
+                    padding-top: 0.5rem !important;
+                }
+
+                .dropdowns {
+                    &.drop-180 {
+                        width: 180px !important;
+                        margin-right: 22px;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        .main-nav {
+            .col-3 {
+                padding: 0;
+            }
+        }
+    }
+
+    .box .content.media-content h5 {
+        font-size: 1.1rem;
+    }
+
+    div div.box .content.tiles {
+        @include zoom(0.8);
+    }
+
+    .box .content.posts .media .media-body {
+        .link {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        h5 {
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .heading {
+        h1 {
+            font-size: 4.75rem;
+        }
+    }
+
+    .box .content.media-content .image {
+        width: 30%;
+    }
+
+    .box .content.media-content .media-body .informers > div:after {
+        display: none;
+    }
+
+    .box .content.media-content .media-body .informers {
+        padding-top: 1rem !important;
+    }
+
+    .box.top-posts,
+    .box.category-ranker,
+    .box.cross-engagement,
+    .row-top-posts .box {
+        .head h5 {
+            width: 100%;
+            float: left;
+            padding: 20px 0 10px 0 !important;
+        }
+
+        .head .dropdowns {
+            float: left;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .box .nav.properties {
+        .nav-link {
+            h4 {
+                font-size: 0.9rem;
+                margin-bottom: 0;
+                padding-bottom: 0 !important;
+            }
+
+            h6 {
+                height: auto !important;
+                padding-top: 15px;
+            }
+        }
+
+        .nav-link .divider:after {
+            display: none;
+        }
+
+        .text-right {
+            text-align: left !important;
+        }
+
+        .numbers em {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    div.box {
+        .content.tiles {
+            @include zoom(1);
+            height: auto;
+
+            .tile-medium {
+                div.block {
+                    &:nth-child(2),
+                    &:nth-child(4) {
+                        float: right;
+                    }
+
+                    &:nth-child(3) {
+                        margin-left: 0;
+                        margin-top: 7px;
+                    }
+
+                    &:nth-child(4) {
+                        margin-left: 0;
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .dropdowns {
+        .union {
+            max-width: 16.666667%;
+            flex: 0 0 16.666667%;
+        }
+    }
+
+    .row {
+        &.cards {
+            .col-md-3 {
+                flex: 0 0 50% !important;
+                max-width: 50% !important;
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-top: 1.5rem !important;
+                }
+            }
+        }
+    }
+
+    .box .content.posts .media-body {
+        .link,
+        h5 {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1320px) {
+    .calendar-empty {
+        display: none;
+    }
+
+    .dropdowns {
+        > div {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            &.col-md-1 {
+                line-height: 35px;
+            }
+        }
+    }
+
+    .box .content.media-content h5 {
+        font-size: 1.1rem;
+    }
+
+    .box .content.media-content .media-body .informers > div:after {
+        display: none;
+    }
+
+    .box.top-posts {
+        .head h5 {
+            width: 100%;
+            float: left;
+            padding: 20px 0 10px 0 !important;
+        }
+
+        .head .dropdowns {
+            float: left;
+        }
+
+        .content.media-content {
+            height: 934px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+    .box {
+        .content.bars {
+            .row {
+                > div {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .main-nav,
+    .additional-nav,
+    .btn-group .btn {
+        font-size: 12px;
+    }
+
+    .heading h1 {
+        font-size: 3.8rem;
+    }
+
+    .heading h2 {
+        margin-top: -45px;
+        font-size: 25px;
+    }
+
+    header .logo + .col-lg-5 {
+        padding-left: 0 !important;
+    }
+
+    .box .nav.properties .nav-link h4 {
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    .box .head .dropdowns {
+        padding-bottom: 15px;
+    }
+
+    .box .content.bars {
+        font-size: 12px;
+        margin-top: 9px !important;
+
+        .row {
+            padding-bottom: 0 !important;
+        }
+    }
+}
+
+@media (max-width:1450px) {
+    .box {
+        .content.tiles {
+            @include zoom(0.9);
+        }
+
+        .content.media-content {
+            height: 1143px;
+        }
+    }
+
+    .social-row {
+        .box {
+            .head {
+                .dropdowns {
+                    float: left;
+                    margin-right: 0;
+                }
+
+                h5 {
+                    width: 100%;
+                    padding: 20px 0 10px 0 !important;
+                    position: relative;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1340px) {
+    .box {
+        .content.tiles {
+            @include zoom(0.8);
+        }
+
+        .content.media-content {
+            height: 1086px;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .box .nav.properties .nav-link h6 {
+        white-space: normal;
+        margin-bottom: 0;
+        height: 35px;
+    }
+
+    .box .content.tiles {
+        @include zoom(0.6);
+    }
+
+    .social-row {
+        .box {
+            .head {
+                .dropdowns {
+                    &.drop-180 {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    div div.box .content.tiles {
+        @include zoom(0.7);
+    }
+}
+
+@media (max-width: 400px) {
+    div div.box .content.tiles {
+        @include zoom(0.58);
+    }
+
+    .box .head .dropdowns.drop-180 {
+        width: 146px;
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        &.cards {
+            .col-md-3 {
+                margin-top: 1.5rem !important;
+
+                &:nth-child(1) {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+    }
+
+    .box .content.posts {
+        .media {
+            flex-wrap: wrap;
+
+            .image,
+            .media-body {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
