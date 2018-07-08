@@ -181,7 +181,69 @@
     div.box {
         .content.tiles {
             @include zoom(1);
-            height: auto;
+            height: 870px;
+
+            a.circle {
+                &.circle2 {
+                    margin-left: -170px;
+                }
+
+                &.circle3 {
+                    margin-right: -170px;
+                }
+
+                &.circle4 {
+                    margin-right: -170px;
+                }
+
+                &.circle5 {
+                    margin-left: -170px;
+                }
+
+                &.circle6 {
+                    margin-left: 96px;
+                }
+
+                &.circle7 {
+                    margin-right: 96px;
+                }
+
+                &.circle8 {
+                    margin: 315px 0 0 81px;
+                }
+
+                &.circle9 {
+                    margin: -349px 0 0 47px;
+                }
+
+                &.circle10 {
+                    margin: -435px 0 0 93px;
+                }
+
+                &.circle13 {
+                    margin: 209px 0 0 99px;
+                }
+
+                &.circle14 {
+                    margin: -280px 93px 0 0;
+                }
+
+                &.circle16 {
+                    margin: 320px 89px 0 0;
+                }
+
+                &.circle17 {
+                    margin: 338px -27px 0 0;
+                }
+
+                &.circle18 {
+                    margin: -415px 60px 0 0;
+                }
+
+                &.circle19 {
+                    margin: -431px -52px 0 0;
+                }
+            }
 
             .tile-medium {
                 div.block {
@@ -335,6 +397,10 @@
 }
 
 @media (max-width:1450px) {
+    .tooltip {
+        will-change: auto;
+    }
+
     .box {
         .content.tiles {
             @include zoom(0.9);
@@ -400,19 +466,14 @@
     }
 }
 
-@media (max-width: 450px) {
-    div div.box .content.tiles {
-        @include zoom(0.7);
-    }
-}
-
 @media (max-width: 400px) {
-    div div.box .content.tiles {
-        @include zoom(0.58);
-    }
-
     .box .head .dropdowns.drop-180 {
         width: 146px;
+    }
+    div div.box {
+        .content.tiles {
+            @include zoom(.6);
+        }
     }
 }
 

@@ -4,6 +4,10 @@ $(document).ready(function () {
         $(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
 
+    $('.tiles .circle').tooltip({
+        container: '.tiles'
+    });
+
     google.charts.load('current', { 'packages': ['line', 'corechart'] });
 
 
